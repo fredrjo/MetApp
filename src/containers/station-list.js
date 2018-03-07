@@ -5,6 +5,9 @@ import { bindActionCreators } from 'redux';
 
 class StationList extends Component {
     renderList() {
+        if (!this.props.stations) {
+            return (<li>hello</li>);
+        }
         return this.props.stations.map((station) => {
             return (
                 <li 

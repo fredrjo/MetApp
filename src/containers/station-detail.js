@@ -10,6 +10,7 @@ class StationDetail extends Component {
             <div>
                 <h3>Details</h3>
                 <div>{this.props.station.name}</div>
+                <div>{this.props.station.id}</div>
             </div>
         );
     }
