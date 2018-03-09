@@ -7,10 +7,11 @@ class StationDetail extends Component {
             return <div>Ready, steady go!</div>
         }
         return (
-            <div>
-                <h3>Details</h3>
-                <div>{this.props.station.name}</div>
+            <div className="alert alert-success">
+                <h3>{this.props.station.name}</h3>
                 <div>{this.props.station.id}</div>
+                <div>{this.props.station.masl}</div>
+                <div><button className="btn btn-success">Get weather</button></div>
             </div>
         );
     }

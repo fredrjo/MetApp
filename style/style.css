@@ -2,3 +2,6 @@
     max-height : 600px;
     overflow: scroll;
 }
+.search-field {
+    float : right;
+}
