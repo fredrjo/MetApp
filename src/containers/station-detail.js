@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index';
 
 class StationDetail extends Component {
     render() {
@@ -11,7 +13,9 @@ class StationDetail extends Component {
                 <h3>{this.props.station.name}</h3>
                 <div>{this.props.station.id}</div>
                 <div>{this.props.station.masl}</div>
-                <div><button className="btn btn-success">Get weather</button></div>
+                <div><button 
+                onClick={() => this.props.fetchWeather(this.props.station)}
+                className="btn btn-success">Get weather</button></div>
             </div>
         );
     }
@@ -21,4 +25,7 @@ function mapStateToProps(state) {
         station : state.activeStation
     }
 }
-export default connect(mapStateToProps)(StationDetail);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({fetchWeather : fetchWeather }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(StationDetail);
