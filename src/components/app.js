@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div>
         <div><SearchBar /></div>
-        <div><StationList /></div>
+        <div><StationList  class="station-list" /></div>
         <div><StationDetail /></div>
       </div>
     );

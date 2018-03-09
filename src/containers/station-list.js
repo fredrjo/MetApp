@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectStation } from '../actions/index';
+import { selectStation, fetchStations } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class StationList extends Component {
+    componentWillMount() {
+        this.props.fetchStations();
+    }
+
     renderList() {
         if (!this.props.stations) {
             return (<li>hello</li>);
@@ -32,6 +36,6 @@ function mapStateToProps(state) {
     }
 }
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({selectStation : selectStation }, dispatch);
+    return bindActionCreators({selectStation : selectStation, fetchStations : fetchStations }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(StationList);
