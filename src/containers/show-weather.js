@@ -14,15 +14,15 @@ class ShowWeather extends Component {
         return this.props.weather.data.map((weather) => {
             return (
                 <li 
-                key={weather.referenceTime} 
-                className="list-group-item">{weather.referenceTime}</li>
+                key={weather.elementId} 
+                className="list-group-item">{weather.elementId}<b>({weather.timeResolution})</b></li>
             );
         });
     }
     
     render() {
         return (
-            <ul className="list-group col-sm-4">
+            <ul className="list-group col-sm-8">
                 {this.renderList()}
             </ul>
         )    

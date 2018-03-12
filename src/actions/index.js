@@ -15,7 +15,7 @@ export function fetchStations() {
 }
 export function fetchWeather(station) {
     console.log(station);
-    const request2 = axios.get('http://localhost:5000/weather?id='+station.id);
+    const request2 = axios.get('http://localhost:5000/info?id='+station.id);
     return {
         type : "FETCH_WEATHER",
         payload : request2
