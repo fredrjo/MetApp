@@ -9,13 +9,21 @@ export default class App extends Component {
     return (
       <div>
         <div className="jumbotron text-center">
-          <h1>Choose your path choose your destiny</h1>
+          <h1>Met weather for you!</h1>
         </div>
       <div>
-        <div className="search-field"><SearchBar /></div>
-        <div><StationList /></div>
-        <div><StationDetail /></div>
-        <div><ShowWeather /></div>
+       
+          <div className="col-sm-4">
+          <SearchBar />
+          <StationList />
+          </div>
+          
+          <div className="col-sm-8">
+          
+          <div><StationDetail /></div>
+          <div><ShowWeather /></div>
+          
+        </div>
       </div>
       </div>
     );

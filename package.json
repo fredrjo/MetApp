@@ -34,6 +34,7 @@
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-sparklines": "^1.4.2",
     "react-table": "^6.8.0",
     "redux": "^3.0.4",
     "redux-logger": "^3.0.6",

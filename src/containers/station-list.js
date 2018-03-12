@@ -24,7 +24,7 @@ class StationList extends Component {
     
     render() {
         return (
-            <ul className="list-group col-sm-4">
+            <ul className="myList">
                 {this.renderList()}
             </ul>
         )    

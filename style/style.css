@@ -3,5 +3,17 @@
     overflow: scroll;
 }
 .search-field {
+    width : 100%;
+    
+}
+.googlemap {
+    height : 200px;
+    width : 250px;
     float : right;
+}
+.myList {
+    padding-top: 10px;
+    height : 600px;
+    overflow-y : scroll;
+    padding-left : 0px;
 }
