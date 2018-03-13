@@ -11,20 +11,16 @@ export default class App extends Component {
         <div className="jumbotron text-center">
           <h1>Met weather for you!</h1>
         </div>
-      <div>
-       
+        <div>
           <div className="col-sm-4">
-          <SearchBar />
-          <StationList />
+            <SearchBar />
+            <StationList />
           </div>
-          
           <div className="col-sm-8">
-          
-          <div><StationDetail /></div>
-          <div><ShowWeather /></div>
-          
+            <div><StationDetail /></div>
+            <div><ShowWeather /></div>
+          </div>
         </div>
-      </div>
       </div>
     );
   }

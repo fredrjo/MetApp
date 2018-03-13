@@ -14,7 +14,6 @@ class StationDetail extends Component {
 
         return (
             <div className="alert alert-success">
-                
                 <h3>{this.props.station.name}</h3>
                 <GoogleMap lng={coord[0]} lat={coord[1]} />
                 <div>{this.props.station.id}</div>
@@ -23,12 +22,12 @@ class StationDetail extends Component {
                 <div>sdfsfsf</div>
                 <div>sdfsfsf</div>
                 <div>sdfsfsf</div>
-                
                 <div>
-                
                     <button 
-                onClick={() => this.props.fetchWeather(this.props.station)}
-                className="btn btn-success">Get weather</button></div>
+                        onClick={() => this.props.fetchWeather(this.props.station)}
+                        className="btn btn-success">Get weather
+                    </button>
+                </div>
             </div>
         );
     }
