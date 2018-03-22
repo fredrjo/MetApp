@@ -18,10 +18,10 @@ class StationDetail extends Component {
                 <GoogleMap lng={coord[0]} lat={coord[1]} />
                 <div>{this.props.station.id}</div>
                 <div>{this.props.station.masl}</div>
-                <div>sdfsfsf</div>
-                <div>sdfsfsf</div>
-                <div>sdfsfsf</div>
-                <div>sdfsfsf</div>
+                <div>Her kommer oversikt over detaljer for stasjonen</div>
+                <div>-- Her blir det mer</div>
+                <div>-- Her blir det enda mer</div>
+                <div>-- Her blir...</div>
                 <div>
                     <button 
                         onClick={() => this.props.fetchWeather(this.props.station)}

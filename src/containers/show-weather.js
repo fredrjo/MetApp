@@ -9,10 +9,13 @@ class ShowWeather extends Component {
             return (<li>No weather</li>);
         }
         let x = [];
-        console.log(this.props.weather);
-        for (let i=0;i<this.props.weather.length; i++) {
-            x[i]=i*.1;
+        let y = [];
+        
+        for (let i=0;i<this.props.weather.length;i++) {
+            x[i]=new Date(this.props.weather[i].time);
+            y[i]=this.props.weather[i].value;
         }
+        console.log(this.props.weather);
         return (
             <div>
             <Sparklines height={240} width={360} data={this.props.weather}>
@@ -21,13 +24,13 @@ class ShowWeather extends Component {
             <Plot
             data={
                 [{
-                x : x,
-                y: this.props.weather,
+                x ,
+                y,
                 type: 'line',
                 mode: 'lines+points',
                 marker: {color: 'red'},
               }] }
-            layout={{width: 510, height: 420, title: 'You can touch this'}}></Plot></div>
+            layout={{width: 510, height: 420, showgrid :true, gridcolor : "#333", title: 'This is your graph'}}></Plot></div>
         );
     }
     
