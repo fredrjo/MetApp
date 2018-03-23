@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:5300/';
+const baseUrl = 'http://loke.cebyc.int:5300/';
 
 export function selectStation(station) {
     return {
