@@ -11,16 +11,12 @@ class ShowWeather extends Component {
         let x = [];
         let y = [];
         
-        for (let i=0;i<this.props.weather.length;i++) {
-            x[i]=new Date(this.props.weather[i].time);
-            y[i]=this.props.weather[i].value;
+        for (let i = 0; i<this.props.weather.length; i++) {
+            x[i] = new Date(this.props.weather[i].time);
+            y[i] = this.props.weather[i].value;
         }
-        console.log(this.props.weather);
         return (
             <div>
-            <Sparklines height={240} width={360} data={this.props.weather}>
-                <SparklinesLine color="red" />
-            </Sparklines>
             <Plot
             data={
                 [{
@@ -30,7 +26,13 @@ class ShowWeather extends Component {
                 mode: 'lines+points',
                 marker: {color: 'red'},
               }] }
-            layout={{width: 510, height: 420, showgrid :true, gridcolor : "#333", title: 'This is your graph'}}></Plot></div>
+            layout={ {
+                width: 620, 
+                height: 490, 
+                showgrid :true, 
+                gridcolor : "#333", 
+                title: 'This is your graph'}
+            }></Plot></div>
         );
     }
     

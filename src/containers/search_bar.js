@@ -8,8 +8,8 @@ class SearchBar extends Component {
     }
     render() { 
         return (<div className="search_field">
-            <input onChangeEvent={event => this.setState({term : event.target.value})}/>
-            <button onClick={this.onClickEvent}>Search</button>
+            <input onChangeEvent={ event => this.setState({ term : event.target.value })}/>
+            <button onClick = { this.onClickEvent }>Search</button>
             </div>);
     }
     onClickEvent() {
